@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tips & Guides</title>
+    <link rel="icon" type="logo/png" href="logo.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">
+            <img src="logo.jpg" alt="Renewed Minds Wellness Center" style="height: 110px;">
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about us.html">About Us</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="tips.html">Tips</a></li>
+            <li><a href="event.html">Events</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+<header class="hero-header">
+    <h1>Tips & Guides</h1>
+    <p>Simple steps to improve your mental well-being and live a healthier life.</p>
+</header>
+
+<section class="quote-box">
+    <h2>Quote of the Day</h2>
+    <p>"Taking care of your mind is just as important as taking care of your body."</p>
+</section>
+
+<section class="tips-container">
+
+    <div class="tips-card">
+        <video class="tips-video" controls playsinline>
+            <source src="box breathing technique.mp4" type="video/mp4">
+        </video>
+        <h2>Anxiety & Stress</h2>
+        <ul>
+            <li><strong>Breathing Techniques: </strong>Practice deep or "box breathing" to calm your nervous system when feeling overwhelmed or anxious.</li>
+            <li><strong>Minimize Stimulants: </strong>Reduce caffeine intake and limit exposure to social media or news that may trigger worry.</li>
+            <li><strong>Grounding Exercises: </strong>Use the "5-4-3-2-1" technique (identify 5 things you see, 4 you can touch, 3 you hear, 2 you smell, and 1 you can taste) to stay present.</li>
+        </ul>
+    </div>
+
+    <div class="tips-card">
+        <video class="tips-video" controls playsinline>
+            <source src="burnout.mp4" type="video/mp4">
+        </video>
+        <h2>Burnout</h2>
+        <ul>
+            <li><strong>Set Boundaries:</strong>Learn to say "no" to extra responsibilities and prioritize rest as a non-negotiable part of your schedule.</li>
+            <li><strong>Task Management:</strong> Break overwhelming projects into tiny, manageable steps to regain a sense of progress.</li>
+            <li><strong>Prioritize Sleep:</strong> High-quality rest is essential for physical and emotional recovery from prolonged stress.</li>
+        </ul>
+    </div>
+
+    <div class="tips-card">
+        <video class="tips-video" controls playsinline>
+            <source src="depression.mp4" type="video/mp4">
+        </video>
+        <h2>Depression, Bipolar & Schizophrenia</h2>
+        <ul>
+            <li><strong>Seek Professional Help:</strong> These conditions require clinical diagnosis and management (therapy or medication) from a psychiatrist or psychologist.</li>
+            <li><strong>Stay Connected:</strong> Avoid isolating yourself; speak to a trusted friend or family member about your feelings.</li>
+            <li><strong>Consistency:</strong> If you are under treatment, ensure you attend all therapy sessions and take medications exactly as prescribed by your doctor.</li>
+        </ul>
+    </div>
+
+<div class="tips-card article-card">
+<video autoplay loop muted playsinline class="tips-image-gif">
+    <source src="gif.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+
+    <h2>Recommended Articles</h2>
+    <ul>
+        <li><strong><a href="https://www.medicalnewstoday.com/articles/154543" target="_blank"></strong> Understanding Mental Health: Definitions, Common Disorders, and Early Signs</a></li>
+        <li><strong><a href="https://www.lifehack.org/973656/mental-health-awareness" target="_blank"></strong>Why Mental Health Awareness Matters and How You Can Make a Difference</a></li>
+        <li><strong><a href="https://www.tandfonline.com/doi/full/10.1080/28367138.2024.2400612#abstract" target="_blank"></strong>The Future of College Student Mental Health: Student Perspectives</a></li>
+        <li><strong><a href="https://jas.uitm.edu.my/images/2024_APRIL/10.pdf" target="_blank"></strong>Mental Health Awareness Among Students in Higher Education</a></li>
+    </ul>
+</div>
+
+<section class="checklist-section">
+    <h2>Daily Self-Care Checklist</h2>
+    <div class="checklist">
+        <label><input type="checkbox"> Drink enough water</label>
+        <label><input type="checkbox"> Exercise for 30 minutes</label>
+        <label><input type="checkbox"> Take a short break</label>
+        <label><input type="checkbox"> Practice gratitude</label>
+        <label><input type="checkbox"> Get enough sleep</label>
+    </div>
+</section>
+
+</section> <!-- Penutup tips-container -->
+
+    <section class="help-section">
+        <h2>Need Immediate Support?</h2>
+        <p>You are not alone. Reach out to a trusted person or seek professional help if you are struggling with your mental health.</p>
+        <button onclick="window.location.href='contact.html'">Contact Us</button>
+    </section>
+
+    <footer>
+    <p>&copy; 2026 Renewed Minds Wellness Center</p>
+    <p>Last Updated: <span id="last-updated"></span></p>
+</footer>
+
+<script>
+    function updateDateTime() {
+        const now = new Date();
+        
+        // Menggunakan 'en-GB' untuk mendapatkan format masa 12-jam dengan AM/PM
+        const dateOptions = { day: 'numeric', month: 'long', year: 'numeric' };
+        const timeOptions = { hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true };
+        
+        const date = now.toLocaleDateString('en-GB', dateOptions);
+        const time = now.toLocaleTimeString('en-GB', timeOptions);
+        
+        // Gabungkan dan paparkan
+        document.getElementById('last-updated').textContent = `${date} | ${time}`;
+    }
+
+    updateDateTime();
+</script>
+
+</body>
+</html>

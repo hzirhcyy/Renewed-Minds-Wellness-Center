@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <link rel="icon" type="logo/png" href="logo.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">
+            <img src="logo.jpg" alt="Renewed Minds Wellness Center" style="height: 110px;">
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about us.html">About Us</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="tips.html">Tips</a></li>
+            <li><a href="event.html">Events</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+<header class="hero-header">
+    <h1>Events & Workshops</h1>
+    <p>Join our activities and learn more about mental health and emotional well-being.</p>
+</header>
+
+<section class="events-container">
+
+    <div class="event-card">
+        <img src="workshop1.jpg" alt="Stress Management Workshop">
+
+        <div class="event-info">
+            <h2>Stress Management Workshop</h2>
+
+            <p><i class="fa-solid fa-calendar"></i> 15 July 2026</p>
+
+            <p><i class="fa-solid fa-location-dot"></i> UiTM Segamat </p>
+
+            <p>
+                Learn practical techniques to manage stress and improve emotional well-being.
+            </p>
+
+<button class="register-btn"
+onclick="window.location.href='register.html'">
+    Register Now
+</button>
+
+        </div>
+    </div>
+
+    <div class="event-card">
+        <img src="workshop2.jpg" alt="Mental Health Awareness Seminar">
+
+        <div class="event-info">
+            <h2>Mental Health Awareness Seminar</h2>
+
+            <p><i class="fa-solid fa-calendar"></i> 22 August 2026</p>
+
+            <p><i class="fa-solid fa-location-dot"></i> Online via Zoom</p>
+
+            <p>
+                Gain a better understanding of mental health and ways to support others.
+            </p>
+
+<button class="register-btn"
+onclick="window.location.href='register.html'">
+    Register Now
+</button>
+
+        </div>
+    </div>
+
+    <div class="event-card">
+        <img src="workshop3.jpg" alt="Mindfulness Meditation Session">
+
+        <div class="event-info">
+            <h2>Mindfulness Meditation Session</h2>
+
+            <p><i class="fa-solid fa-calendar"></i> 10 September 2026</p>
+
+            <p><i class="fa-solid fa-location-dot"></i> Renewed Minds Wellness Centre, Kuala Lumpur</p>
+
+            <p>
+                Relax your mind and discover the benefits of meditation and mindfulness.
+            </p>
+
+<button class="register-btn"
+onclick="window.location.href='register.html'">
+    Register Now
+</button>
+
+        </div>
+    </div>
+
+</section>
+
+<section class="gallery-section">
+    <h2>Event Gallery</h2>
+    <div class="gallery-container">
+        
+        <div class="gallery-item">
+            <img src="event1.jpg" alt="Event 1">
+            <div class="caption">Community Wellness Gathering: Connecting minds and hearts together</div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="event2.jpg" alt="Event 2">
+            <div class="caption">Voices of Resilience: Mental Health Wall</div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="event3.jpg" alt="Event 3">
+            <div class="caption">Crafting Calm: Mindful Tote Workshop</div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="event4.jpg" alt="Event 4">
+            <div class="caption">Unity in Diversity: Mental Health Awareness</div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="event5.jpg" alt="Event 5">
+            <div class="caption">Hope & Healing: Community Vision Board</div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="event6.jpg" alt="Event 6">
+            <div class="caption">Insights & Connections: Seminar Series</div>
+        </div>
+
+       <div class="gallery-item">
+            <img src="event7.jpg" alt="Event 7">
+            <div class="caption">Advocating Change: World Mental Health Day</div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="event8.jpg" alt="Event 8">
+            <div class="caption">Together We Thrive: Support & Solidarity</div>
+        </div>
+        </div>
+</section>
+
+<section class="help-section">
+    <h2>Need Immediate Support?</h2>
+    <p>You are not alone. Reach out to a trusted person or seek professional help if you are struggling with your mental health.</p>
+
+    <button onclick="window.location.href='contact.html'">
+        Contact Us
+    </button>
+</section>
+
+<footer>
+    <p>&copy; 2026 Renewed Minds Wellness Center</p>
+    <p>Last Updated: <span id="last-updated"></span></p>
+</footer>
+
+<script>
+    function updateDateTime() {
+        const now = new Date();
+        
+        // Menggunakan 'en-GB' untuk mendapatkan format masa 12-jam dengan AM/PM
+        const dateOptions = { day: 'numeric', month: 'long', year: 'numeric' };
+        const timeOptions = { hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true };
+        
+        const date = now.toLocaleDateString('en-GB', dateOptions);
+        const time = now.toLocaleTimeString('en-GB', timeOptions);
+        
+        // Gabungkan dan paparkan
+        document.getElementById('last-updated').textContent = `${date} | ${time}`;
+    }
+
+    updateDateTime();
+</script>
+
+</body>
+</html>

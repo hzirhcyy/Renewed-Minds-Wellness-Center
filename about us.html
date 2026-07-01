@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="icon" type="logo/png" href="logo.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+
+    <nav>
+        <div class="logo">
+            <img src="logo.jpg" alt="Renewed Minds Wellness Center" style="height: 110px;">
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about us.html">About Us</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="tips.html">Tips</a></li>
+            <li><a href="event.html">Events</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+<header class="hero-header">
+    <h1>About Us</h1>
+    <p>Empowering individuals to prioritise mental wellness.</p>
+    </header>
+
+    <section class="about-content">
+        <div class="about-card">
+            <i class="fa-solid fa-clock-rotate-left"></i>
+            <h2>Company History</h2>
+            <p>Renewed Minds Wellness Center was founded in 2022 by a group of mental health advocates, psychologists and volunteers who recognized the growing need for mental health education and emotional support.</p>
+            <p>The organization was created to bridge the gap between professional mental health services and public awareness by offering educational programs, counselling support and community engagement activities.</p>
+        </div>
+    </section>
+
+<section class="vm-container">
+    <div class="vm-card">
+        <h3><i class="fa-solid fa-bullseye"></i> Mission</h3>
+        <ul>
+            <li>To promote mental health awareness through education and community engagement.</li>
+            <li>To provide accessible, compassionate and professional mental health support services.</li>
+            <li>To reduce the stigma surrounding mental health by encouraging open conversations and acceptance.</li>
+        </ul>
+    </div>
+
+    <div class="vm-card">
+        <h3><i class="fa-solid fa-eye"></i> Vision</h3>
+        <p>To create a society where mental health is valued, understood and accessible to everyone, empowering individuals to live healthier, happier and more resilient lives.</p>
+    </div>
+
+    <div class="vm-card">
+        <h3><i class="fa-solid fa-list-check"></i> Objectives</h3>
+        <ul>
+            <li>Increase public awareness of mental health issues through campaigns and educational programs.</li>
+            <li>Provide high-quality counselling and mental wellness services for individuals of all ages.</li>
+        </ul>
+    </div>
+</section>
+
+    <section class="help-section">
+        <h2>Need Immediate Support?</h2>
+        <p>You are not alone. Reach out to a trusted person or seek professional help if you are struggling with your mental health.</p>
+        <button onclick="window.location.href='contact.html'">Contact Us</button>
+    </section>
+
+    <footer>
+    <p>&copy; 2026 Renewed Minds Wellness Center</p>
+    <p>Last Updated: <span id="last-updated"></span></p>
+</footer>
+
+<script>
+    function updateDateTime() {
+        const now = new Date();
+        
+        // Menggunakan 'en-GB' untuk mendapatkan format masa 12-jam dengan AM/PM
+        const dateOptions = { day: 'numeric', month: 'long', year: 'numeric' };
+        const timeOptions = { hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true };
+        
+        const date = now.toLocaleDateString('en-GB', dateOptions);
+        const time = now.toLocaleTimeString('en-GB', timeOptions);
+        
+        // Gabungkan dan paparkan
+        document.getElementById('last-updated').textContent = `${date} | ${time}`;
+    }
+
+    updateDateTime();
+</script>
+
+</body>
+</html>

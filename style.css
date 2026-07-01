@@ -1,0 +1,1037 @@
+/* 1. RESET & VARIABLES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --pastel-purple: #68c45c;
+    --soft-cream: #fdfbf7;
+    --brown-pink: #d7b5a6;
+    --dark-green: #4f9e44;
+    --text-color: #333;
+}
+
+body {
+    background-color: var(--soft-cream);
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* 2. NAVIGATION */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 60px;
+    background: white;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo img { height: 90px; }
+
+nav ul { display: flex; list-style: none; gap: 30px; }
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 600;
+    transition: 0.3s;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background: var(--pastel-purple);
+    bottom: -5px;
+    left: 0;
+    transition: 0.3s;
+}
+
+nav ul li a:hover::after { width: 100%; }
+nav ul li a:hover { color: var(--pastel-purple); }
+
+/* 3. HERO SECTION (Dibaiki) */
+header {
+    text-align: center;
+    padding: 80px 20px;
+    background-color: var(--pastel-purple);
+    color: white;
+    border-radius: 0 0 60px 60px; /* Lengkungan bawah sahaja */
+    margin-bottom: 50px;
+}
+
+header h1 { font-size: 3rem; margin-bottom: 15px; animation: fadeIn 1.5s; }
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* 4. POPUP MENU */
+.popup-menu {
+    background: white;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 30px;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    color: var(--text-color);
+}
+
+.popup-menu button {
+    background: var(--pastel-purple);
+    color: white;
+    border: none;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 120px;
+    transition: 0.3s;
+}
+
+.popup-menu button:hover { background: var(--dark-green); transform: scale(1.05); }
+
+/* 5. FEATURES */
+#features { padding: 80px 50px; }
+
+.feature-container { display: flex; justify-content: center; flex-wrap: wrap; gap: 30px; }
+
+.feature-box {
+    background: white;
+    width: 320px;
+    padding: 35px;
+    border-radius: 25px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: 0.4s;
+}
+
+.feature-box:hover { transform: translateY(-10px); }
+
+/* TAMBAHAN UNTUK BUTANG START (LETS START) */
+.start-btn {
+    background-color: white; 
+    color: var(--pastel-purple);          
+    padding: 15px 40px;      
+    font-size: 1.1rem;       
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;     
+    cursor: pointer;
+    transition: all 0.3s ease; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); 
+    text-transform: uppercase; 
+    letter-spacing: 1px;
+    margin-top: 20px;
+}
+
+/* Kesan apabila tetikus diletakkan di atas butang */
+.start-btn:hover {
+    background-color: var(--dark-green); 
+    color: white;             
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Kesan apabila butang ditekan */
+.start-btn:active {
+    transform: translateY(0);
+}
+
+/* 6. HELP SECTION */
+.help-section { text-align: center; padding: 80px 20px; background: #fff; }
+
+.help-section button {
+    background: var(--pastel-purple);
+    color: white;
+    border: none;
+    padding: 15px 35px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* 7. FOOTER */
+footer { text-align: center; padding: 25px; background: var(--brown-pink); color: white; }
+
+/* ABOUT US SECTION */
+
+/* =========================================
+   STYLE UNTUK HALAMAN 'ABOUT US' (PRO)
+========================================= */
+
+/* 1. Reset & Global Style */
+body {
+    background-color: #fcfdfa;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%2368b668' fill-opacity='0.03'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* 2. Nav Bar */
+nav {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 10px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul { list-style: none; display: flex; gap: 20px; }
+nav ul li a { text-decoration: none; color: #333; font-weight: 600; transition: color 0.3s; }
+nav ul li a:hover { color: #68b668; }
+
+/* 3. Hero Header - Gantikan background hijau dengan gambar */
+.hero-header {
+    /* Ganti 'path/to/your/image.jpg' dengan lokasi gambar anda */
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('bg\ mental\ health.jpg');
+    background-size: cover;          /* Memastikan gambar memenuhi kawasan */
+    background-position: center;     /* Memastikan gambar sentiasa di tengah */
+    background-repeat: no-repeat;
+    
+    color: white;
+    text-align: center;
+    padding: 120px 20px;
+    border-radius: 0 0 60px 60px;
+    margin-bottom: 70px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* 4. Layout Sections */
+.about-content, .vm-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px 80px 20px;
+}
+
+/* 5. Styling Kad (History, Mission, Vision, Objectives) */
+.about-card, .vm-card {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 35px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.06);
+    border: 1px solid #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.about-card:hover, .vm-card:hover { transform: translateY(-10px); }
+
+/* Styling Tajuk & Ikon */
+.about-card h2, .vm-card h3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+    font-size: 2.2rem;
+    color: #2e7d32;
+    font-weight: 700;
+}
+
+.about-card i, .vm-card i { font-size: 50px; color: #68b668; margin-bottom: 0; }
+
+/* Styling Teks */
+.about-card p, .vm-card p, .vm-card ul {
+    flex-grow: 1;
+    color: #555;
+    line-height: 1.8;
+}
+
+.about-card p { max-width: 800px; margin: 0 auto 20px auto; }
+
+.vm-card ul { text-align: left; width: 100%; list-style: none; padding: 0; }
+.vm-card ul li { position: relative; padding-left: 30px; margin-bottom: 18px; }
+.vm-card ul li::before { content: '→'; color: #68b668; position: absolute; left: 0; font-weight: bold; }
+
+@media (min-width: 800px) {
+    .vm-container {
+        display: flex;
+        gap: 30px;
+        align-items: stretch;
+    }
+}
+
+/* 6. Help Section & Footer */
+.help-section {
+    background: #2e7d32 !important;
+    padding: 80px 20px !important;
+    text-align: center !important;
+    color: #ffffff !important;
+}
+
+.help-section button {
+    background: #ffffff !important;
+    color: #2e7d32 !important;
+    padding: 20px 50px !important;
+    border-radius: 50px !important;
+    font-weight: bold !important;
+    border: none !important;
+    cursor: pointer !important;
+}
+
+footer { background-color: #1a1a1a !important; color: white !important; padding: 30px !important; text-align: center; }
+
+/* RESOURCES SECTION */
+
+/* Gantikan mana-mana bahagian header/kotak hijau dengan kelas ini */
+.hero-header {
+    background-color: var(--pastel-purple); /* Menggunakan warna dari root anda */
+    color: white;
+    text-align: center;
+    padding: 100px 20px;     /* Padding yang sama untuk semua */
+    min-height: 350px;      /* Ketinggian minimum yang sama */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Teks akan sentiasa di tengah */
+    align-items: center;
+    border-radius: 0 0 60px 60px; /* Lengkungan bawah */
+    margin-bottom: 50px;
+}
+
+.resources-hero h1{
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+.resources-container{
+    padding:80px 50px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:35px;
+}
+
+
+
+.resource-card{
+    background:white;
+    padding:35px;
+    border-radius:25px;
+    box-shadow:0 10px 20px rgba(0,0,0,0.08);
+    transition:0.4s;
+}
+
+.resource-card:hover{
+    transform:translateY(-10px);
+}
+
+.resource-card .resource-icon {
+    width: 100%;            /* Gambar akan memenuhi 100% lebar kad */
+    height: auto;           /* Ketinggian akan mengikut nisbah asal gambar */
+    max-height: 200px;      /* Tetapkan had supaya gambar tidak terlalu tinggi/besar */
+    object-fit: cover;      /* Memastikan gambar nampak kemas dan tidak herot */
+    border-radius: 15px;    /* Tambahkan sedikit lengkungan pada bucu gambar supaya nampak cantik */
+    display: block;
+    margin: 0 auto 20px auto; 
+}
+
+.resource-card h2{
+    color:#4f9e44;
+    margin-bottom:15px;
+}
+
+.resource-card h4{
+    margin-top:20px;
+    color:#4f9e44;
+}
+
+.resource-card ul{
+    margin-top:10px;
+    padding-left:20px;
+}
+
+.resource-card li{
+    margin-bottom:8px;
+}
+
+
+.help-section{
+    background:#f7f7f7;
+    text-align:center;
+    padding:80px 20px;
+}
+
+.help-section button{
+    background:#68c45c;
+    color:white;
+    border:none;
+    padding:15px 35px;
+    border-radius:30px;
+    cursor:pointer;
+    margin-top:20px;
+}
+
+/* Gaya Kotak Audio */
+.audio-box {
+    background-color: #f9f9f9; /* Warna latar belakang lembut */
+    border: 1px solid #e0e0e0;
+    border-radius: 15px; /* Sudut bulat (aesthetic) */
+    padding: 15px;
+    margin-top: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Sedikit bayang untuk efek timbul */
+}
+
+.audio-box p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* Menggayakan audio supaya lebih minimalis */
+.audio-box audio {
+    width: 100%;
+    height: 30px; /* Saiz lebih kecil dan kemas */
+}
+
+/* Memastikan div audio berada di tengah */
+.audio-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fcfcfc; /* Warna latar belakang lembut */
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid #e0e0e0;
+    margin: 15px 0;
+}
+
+
+
+/* Label aesthetic */
+.audio-label {
+    font-size: 0.9em;
+    color: #4a7c59; /* Warna hijau yang seragam dengan tema anda */
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+/* Mengawal saiz pemain audio */
+.aesthetic-audio {
+    width: 100%;
+    max-width: 250px; /* Saiz yang sesuai untuk dalam kad */
+}
+
+/* TIPS SECTION */
+
+/* Gantikan mana-mana bahagian header/kotak hijau dengan kelas ini */
+.hero-header {
+    background-color: var(--pastel-purple); /* Menggunakan warna dari root anda */
+    color: white;
+    text-align: center;
+    padding: 100px 20px;     /* Padding yang sama untuk semua */
+    min-height: 350px;      /* Ketinggian minimum yang sama */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Teks akan sentiasa di tengah */
+    align-items: center;
+    border-radius: 0 0 60px 60px; /* Lengkungan bawah */
+    margin-bottom: 50px;
+}
+
+.tips-hero h1{
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+.quote-box{
+    background:#f7f7f7;
+    text-align:center;
+    padding:60px 20px;
+}
+
+.quote-box h2{
+    color:#4f9e44;
+    margin-bottom:20px;
+}
+
+.quote-box p{
+    font-style:italic;
+    font-size:1.2rem;
+}
+
+.tips-container{
+    padding:80px 50px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:35px;
+}
+
+.tips-card{
+    background:white;
+    padding:35px;
+    border-radius:25px;
+    box-shadow:0 10px 20px rgba(0,0,0,0.08);
+    transition:0.4s;
+}
+
+.tips-card:hover{
+    transform:translateY(-10px);
+}
+
+.tips-card i{
+    font-size:50px;
+    color:#68c45c;
+    margin-bottom:20px;
+}
+
+.tips-card h2{
+    color:#4f9e44;
+    margin-bottom:20px;
+}
+
+.tips-card ul{
+    padding-left:20px;
+}
+
+.tips-card li{
+    margin-bottom:12px;
+}
+
+.article-card{
+    grid-column:span 2;
+}
+
+.checklist-section{
+    background:#f7f7f7;
+    text-align:center;
+    padding:80px 20px;
+}
+
+.checklist-section h2{
+    color:#4f9e44;
+    margin-bottom:30px;
+}
+
+.checklist{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+    max-width:500px;
+    margin:auto;
+    background:white;
+    padding:40px;
+    border-radius:25px;
+    box-shadow:0 10px 20px rgba(0,0,0,0.08);
+}
+
+.checklist label{
+    font-size:18px;
+    text-align:left;
+}
+
+.checklist input{
+    margin-right:10px;
+    transform:scale(1.3);
+}
+
+@media(max-width:768px){
+
+    .article-card{
+        grid-column:span 1;
+    }
+
+    .tips-hero h1{
+        font-size:2.3rem;
+    }
+}
+
+/* Bahagian Bantuan */
+.help-section {
+    background-color: #2d7a26; /* Hijau gelap yang kemas */
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+    width: 100%;             /* Pastikan ia penuh satu skrin */
+    margin: 0;
+}
+
+/* Footer */
+footer {
+    background-color: #1a1a1a; /* Hitam gelap */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    width: 100%;             /* Pastikan ia penuh satu skrin */
+}
+
+.help-section button{
+    background:#68c45c;
+    color:white;
+    border:none;
+    padding:15px 35px;
+    border-radius:30px;
+    cursor:pointer;
+    margin-top:20px;
+}
+
+.tips-video {
+    width: 100%;
+    height: auto; /* Membenarkan ketinggian mengikut ratio video asal */
+    max-height: 250px; /* Hadkan ketinggian supaya kad tidak terlalu panjang */
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    display: block;
+    background: #000; /* Warna latar hitam jika video belum dimuatkan */
+}
+
+/* Sedikit penyesuaian untuk memastikan video kelihatan kemas dalam .tips-card */
+.tips-card {
+    /* Pastikan padding kad tidak terlalu besar untuk video, jika perlu */
+    padding: 30px; /* Kekalkan padding asal atau kurangkan sedikit jika mahu */
+}
+
+.tips-image-gif {
+    width: 100%;
+    height: 200px;       
+    margin-bottom: 20px;
+    object-fit: cover;    /* Ini akan potong video supaya penuh ruang tanpa herot */
+    border-radius: 15px;  /* Bucu melengkung untuk nampak aesthetic */
+    display: block;
+}
+
+/* Styling link dalam senarai */
+.article-card ul li a {
+    text-decoration: none; /* Buang garis bawah */
+    color: #333;           /* Warna teks asal */
+    transition: 0.3s;      /* Animasi lembut bila hover */
+    display: block;        /* Jadikan seluruh baris boleh diklik */
+    padding: 5px 0;
+}
+
+/* Kesan bila mouse lalu atas link */
+.article-card ul li a:hover {
+    color: #4f9e44;        /* Warna hijau bila hover */
+    text-decoration: underline;
+}
+
+/* EVENT SECTION */
+
+/* Gantikan mana-mana bahagian header/kotak hijau dengan kelas ini */
+.hero-header {
+    background-color: var(--pastel-purple); /* Menggunakan warna dari root anda */
+    color: white;
+    text-align: center;
+    padding: 100px 20px;     /* Padding yang sama untuk semua */
+    min-height: 350px;      /* Ketinggian minimum yang sama */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Teks akan sentiasa di tengah */
+    align-items: center;
+    border-radius: 0 0 60px 60px; /* Lengkungan bawah */
+    margin-bottom: 50px;
+}
+
+.events-hero h1{
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+.events-container{
+    padding:80px 50px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(330px,1fr));
+    gap:35px;
+}
+
+.event-card{
+    background:white;
+    border-radius:25px;
+    overflow:hidden;
+    box-shadow:0 10px 20px rgba(0,0,0,0.08);
+    transition:0.4s;
+}
+
+.event-card:hover{
+    transform:translateY(-10px);
+}
+
+.event-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.event-info{
+    padding:30px;
+}
+
+.event-info h2{
+    color:#4f9e44;
+    margin-bottom:20px;
+}
+
+.event-info p{
+    margin-bottom:15px;
+}
+
+.register-btn{
+    background:#68c45c;
+    color:white;
+    border:none;
+    padding:15px 30px;
+    border-radius:30px;
+    cursor:pointer;
+    margin-top:15px;
+    transition:0.3s;
+}
+
+.register-btn:hover{
+    background:#4f9e44;
+}
+
+.gallery-section{
+    background:#f7f7f7;
+    text-align:center;
+    padding:80px 50px;
+}
+
+.gallery-section h2{
+    color:#4f9e44;
+    margin-bottom:50px;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 20px;
+    padding: 20px;
+}
+
+.gallery-item {
+    position: relative; /* Penting untuk kedudukan caption */
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+/* Kesan Hover */
+.gallery-item:hover img {
+    transform: scale(1.1); /* Gambar sedikit membesar */
+}
+
+.gallery-item:hover .caption {
+    opacity: 1; /* Teks muncul */
+}
+
+.gallery-container img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    border-radius:20px;
+    transition:0.4s;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.gallery-container img:hover{
+    transform:scale(1.05);
+}
+
+.help-section{
+    background:#f7f7f7;
+    text-align:center;
+    padding:80px 20px;
+}
+
+.help-section button{
+    background:#68c45c;
+    color:white;
+    border:none;
+    padding:15px 35px;
+    border-radius:30px;
+    cursor:pointer;
+    margin-top:20px;
+}
+
+/* Caption tersembunyi secara lalai */
+.caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(79, 158, 68, 0.9); /* Hijau aesthetic */
+    color: white;
+    padding: 20px 10px;
+    text-align: center;
+    opacity: 0; /* Sembunyi */
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+/* REGISTER SECTION */
+
+.register-section{
+    padding:100px 20px;
+    text-align:center;
+}
+
+.register-section h1{
+    color:#4f9e44;
+    margin-bottom:20px;
+}
+
+.register-form{
+    background:white;
+    max-width:500px;
+    margin:auto;
+    padding:40px;
+    border-radius:25px;
+    box-shadow:0 10px 20px rgba(0,0,0,0.1);
+}
+
+.register-form input,
+.register-form select{
+    width:100%;
+    padding:15px;
+    margin-bottom:20px;
+    border:1px solid #ccc;
+    border-radius:10px;
+    font-size:16px;
+}
+
+.register-form button{
+    background:#68c45c;
+    color:white;
+    border:none;
+    padding:15px 35px;
+    border-radius:30px;
+    cursor:pointer;
+}
+
+.register-form button:hover{
+    background:#4f9e44;
+}
+
+/* CONTACT SECTION */
+
+/* Gantikan mana-mana bahagian header/kotak hijau dengan kelas ini */
+.hero-header {
+    background-color: var(--pastel-purple); /* Menggunakan warna dari root anda */
+    color: white;
+    text-align: center;
+    padding: 100px 20px;     /* Padding yang sama untuk semua */
+    min-height: 350px;      /* Ketinggian minimum yang sama */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Teks akan sentiasa di tengah */
+    align-items: center;
+    border-radius: 0 0 60px 60px; /* Lengkungan bawah */
+    margin-bottom: 50px;
+}
+
+.contact-hero h1{
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+.contact-container{
+    padding:80px 50px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+}
+
+.contact-info,
+.contact-form{
+    background:white;
+    padding:40px;
+    border-radius:25px;
+    box-shadow:0 10px 20px rgba(0,0,0,0.08);
+}
+
+.contact-info h2,
+.contact-form h2{
+    color:#4f9e44;
+    margin-bottom:30px;
+}
+
+.contact-info p{
+    margin-bottom:25px;
+    font-size:18px;
+}
+
+.contact-info i{
+    color:#68c45c;
+    margin-right:10px;
+}
+
+.social-icons{
+    margin-top:30px;
+}
+
+/* Update pada .social-icons supaya nampak lebih menonjol */
+.social-icons a {
+    text-decoration: none;
+    color: #68c45c;
+    font-size: 35px; /* Sedikit lebih besar untuk nampak lebih menonjol */
+    margin-right: 25px; /* Jarak antara ikon */
+    transition: all 0.3s ease; /* Kesan transisi yang licin */
+    display: inline-block;
+}
+
+/* Kesan Hover yang lebih 'aesthetic' */
+.social-icons a:hover {
+    color: #4f9e44;
+    transform: scale(1.2); /* Ikon membesar sedikit apabila disentuh */
+}
+
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+    padding:15px;
+    margin-bottom:20px;
+    border:1px solid #ccc;
+    border-radius:10px;
+    font-size:16px;
+}
+
+.contact-form button{
+    background:#68c45c;
+    color:white;
+    border:none;
+    padding:15px 35px;
+    border-radius:30px;
+    cursor:pointer;
+}
+
+.contact-form button:hover{
+    background:#4f9e44;
+}
+
+.map-section{
+    padding:80px 50px;
+    text-align:center;
+}
+
+.map-section h2{
+    color:#4f9e44;
+    margin-bottom:30px;
+}
+
+.map-section iframe{
+    border-radius:25px;
+    box-shadow:0 10px 20px rgba(0,0,0,0.08);
+}
+
+@media(max-width:900px){
+
+    .contact-container{
+        grid-template-columns:1fr;
+        padding:50px 20px;
+    }
+
+    .map-section{
+        padding:50px 20px;
+    }
+}
+
+/* Container untuk video */
+.hero-video-container {
+    position: relative;
+    width: 100%;
+    height: 80vh; /* Sesuaikan ketinggian */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px; /* Jika mahu bucu bulat seperti contoh */
+}
+
+/* Video itu sendiri */
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Penting supaya video tak senget */
+    z-index: -1;
+}
+
+/* Overlay gelap supaya teks nampak jelas */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* 0.5 adalah tahap kegelapan */
+    z-index: 0;
+}
+
+/* Teks dan butang */
+.hero-content {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+/* Pastikan peta mempunyai ketinggian (height) yang cukup */
+.mapouter {
+    position: relative;
+    text-align: right;
+    width: 100%;
+    height: 450px; /* Tambahkan ketinggian supaya peta muncul */
+}
+
+.gmap_canvas {
+    overflow: hidden;
+    background: none !important;
+    width: 100%;
+    height: 100%;
+}
+
+.gmap_canvas iframe {
+    width: 100%;
+    height: 400px; /* Boleh adjust ikut kesesuaian */
+}
+
+/* Memastikan form tidak melimpah keluar */
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.resources-container {
+    /* Cari kod ini dan ubah 'gap' kepada nilai yang lebih besar */
+    padding: 80px 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 60px; /* Tukar dari 35px kepada 60px atau lebih untuk bagi jarak/gerak ke tepi */
+    justify-items: center; /* Ini akan pastikan kad duduk di tengah kotak grid masing-masing */
+}

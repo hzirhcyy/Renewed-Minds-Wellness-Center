@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources</title>
+    <link rel="icon" type="logo/png" href="logo.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">
+            <img src="logo.jpg" alt="Renewed Minds Wellness Center" style="height: 110px;">
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about us.html">About Us</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="tips.html">Tips</a></li>
+            <li><a href="event.html">Events</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+<header class="hero-header">
+    <h1>Resources</h1>
+    <p>Learn more about mental health and discover ways to take care of your emotional well-being.</p>
+    </header>
+
+<section class="resources-container">
+
+    <div class="resource-card">
+       <img src="anxiety.jpg" alt="Anxiety Icon" class="resource-icon">
+        <h2>Anxiety</h2>
+        <p>
+            Anxiety is a feeling of worry, fear, or nervousness that can affect a person's daily life.
+        </p>
+
+        <h4>Common Symptoms:</h4>
+        <ul>
+            <li>Excessive worrying</li>
+            <li>Restlessness</li>
+            <li>Difficulty concentrating</li>
+            <li>Rapid heartbeat</li>
+        </ul>
+    </div>
+
+    <div class="resource-card">
+        <img src="depression.jpg" alt="Depression Icon" class="resource-icon">
+        <h2>Depression</h2>
+        <p>
+            Depression is a mental health condition that causes persistent feelings of sadness and loss of interest.
+        </p>
+
+        <h4>Common Symptoms:</h4>
+        <ul>
+            <li>Persistent sadness</li>
+            <li>Low energy</li>
+            <li>Hopelessness</li>
+            <li>Sleep problems</li>
+        </ul>
+    </div>
+
+    <div class="resource-card">
+        <img src="stress.jpg" alt="Stress Icon" class="resource-icon">
+        <h2>Stress</h2>
+        <p>
+            Stress is the body's response to challenges or demands that can affect physical and emotional health.
+        </p>
+
+        <h4>Common Symptoms:</h4>
+        <ul>
+            <li>Headaches</li>
+            <li>Fatigue</li>
+            <li>Irritability</li>
+            <li>Difficulty sleeping</li>
+        </ul>
+    </div>
+
+    <div class="resource-card">
+        <img src="burnout.jpg" alt="Burnout Icon" class="resource-icon">
+        <h2>Burnout</h2>
+        <p>
+            Burnout is a state of physical and emotional exhaustion caused by prolonged stress.
+        </p>
+
+        <h4>Common Symptoms:</h4>
+        <ul>
+            <li>Feeling overwhelmed</li>
+            <li>Lack of motivation</li>
+            <li>Exhaustion</li>
+            <li>Reduced productivity</li>
+        </ul>
+    </div>
+
+    <div class="resource-card">
+        <img src="bipolar.jpg" alt="Bipolar Icon" class="resource-icon">
+        <h2>Bipolar</h2>
+        <p>
+        Bipolar disorder is a mental health condition that causes extreme mood swings, alternating between emotional highs (mania) and lows (depression).
+        </p>
+
+        <h4>Common Symptoms:</h4>
+        <ul>
+            <li>Physical Changes</li>
+            <li>Loss of Interest</li>
+            <li>Feelings of Worthlessness</li>
+            <li>Suicidal Thoughts</li>
+        </ul>
+    </div>
+
+
+    <div class="resource-card">
+        <img src="schizophrenia.jpg" alt="Schizophrenia Icon" class="resource-icon">
+        <h2>Schizophrenia</h2>
+        <p>
+         Schizophrenia is a serious, chronic mental health disorder that affects how a person thinks, feels and behaves. 
+         It is characterized by a distorted perception of reality.
+        </p>
+
+        <h4>Common Symptoms:</h4>
+        <ul>
+            <li>Hallucinations</li>
+            <li>Delusions</li>
+            <li>Lack of Motivation</li>
+            <li>Memory Issues</li>
+        </ul>
+    </div>
+
+<section class="resources-container">
+    <div class=" resource wrapper">
+    <div class="resource-layout">
+
+    </section>
+
+    <!-- Contoh di dalam resource-card anda -->
+<div class="resource-card">
+    <h2>Recommended Music</h2>
+    
+    <!-- Kotak Spotify Embed -->
+    <div class="spotify-box">
+<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/5F34yKjlyYTWaZhFeDZvmr?utm_source=generator&si=8e46eae118a347fd" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>    </div>
+</div>
+
+
+</section>
+
+<section class="help-section">
+    <h2>Need Immediate Support?</h2>
+    <p>You are not alone. Reach out to a trusted person or seek professional help if you are struggling with your mental health.</p>
+
+    <button onclick="window.location.href='contact.html'">
+    Contact Us
+    </button>
+</section>
+
+
+
+    <script>
+function toggleMenu() {
+    var menu = document.getElementById('popupMenu');
+    if (menu.style.display === "none") {
+        menu.style.display = "block";
+    } else {
+        menu.style.display = "none";
+    }
+}
+</script>
+
+   <footer>
+    <p>&copy; 2026 Renewed Minds Wellness Center</p>
+    <p>Last Updated: <span id="last-updated"></span></p>
+</footer>
+
+<script>
+    function updateDateTime() {
+        const now = new Date();
+        
+        // Menggunakan 'en-GB' untuk mendapatkan format masa 12-jam dengan AM/PM
+        const dateOptions = { day: 'numeric', month: 'long', year: 'numeric' };
+        const timeOptions = { hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true };
+        
+        const date = now.toLocaleDateString('en-GB', dateOptions);
+        const time = now.toLocaleTimeString('en-GB', timeOptions);
+        
+        // Gabungkan dan paparkan
+        document.getElementById('last-updated').textContent = `${date} | ${time}`;
+    }
+
+    updateDateTime();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Renewed Minds Wellness</title>
+    <link rel="icon" type="image/png" href="logo.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">
+            <img src="logo.jpg" alt="Renewed Minds" style="height: 110px;">
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about us.html">About Us</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="tips.html">Tips</a></li>
+            <li><a href="event.html">Events</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header id="home">
+        <h1>Welcome to Renewed Minds Wellness Center</h1>
+        <p><strong>Your Mental Health Support Platform.</strong></p>
+        <button class="start-btn" onclick="toggleMenu()">Let's Start</button>
+
+        <div id="popupMenu" class="popup-menu" style="display:none;">
+            <button onclick="window.location.href='about us.html'"> 
+                <i class="fa-solid fa-circle-info"></i><br><span>About Us</span>
+            </button>
+            <button onclick="window.location.href='contact.html'">
+                <i class="fa-solid fa-envelope"></i><br><span>Contact</span>
+            </button>
+            <button onclick="window.location.href='resources.html'">
+                <i class="fa-solid fa-book"></i><br><span>Resources</span>
+            </button>
+            <button onclick="window.location.href='tips.html'">
+                <i class="fa-solid fa-lightbulb"></i><br><span>Tips</span>
+            </button>
+            <button onclick="window.location.href='event.html'">
+                <i class="fa-solid fa-calendar-days"></i><br><span>Events</span>
+            </button>
+            <button onclick="toggleMenu()" style="background-color: #7f8c8d;">
+                <i class="fa-solid fa-arrow-left"></i><br><span>Back</span>
+            </button>
+        </div>
+    </header>
+
+    <section id="features">
+        <div class="feature-container">
+            <div class="feature-box">
+                <i class="fa-solid fa-shield-heart"></i>
+                <h3>Your Privacy First</h3>
+                <p>Your journey is yours alone. We ensure a safe, secure space where your trust is our highest priority.</p>
+            </div>
+            <div class="feature-box">
+                <i class="fa-solid fa-user-doctor"></i>
+                <h3>Compassionate Experts</h3>
+                <p>Connect with accredited professionals who don't just offer advice, but truly listen with empathy.</p>
+            </div>
+            <div class="feature-box">
+                <i class="fa-solid fa-clock"></i>
+                <h3>Here When You Need Us</h3>
+                <p>Life doesn't wait, and neither do we. Support is available whenever you need it.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="help-section">
+        <h2>Need Immediate Support?</h2>
+        <p>You are not alone. Reach out to a trusted person or seek professional help.</p>
+        <button onclick="window.location.href='contact.html'">Contact Us</button>
+    </section>
+
+    <footer>
+    <p>&copy; 2026 Renewed Minds Wellness Center</p>
+    <p>Last Updated: <span id="last-updated"></span></p>
+</footer>
+
+<script>
+    function updateDateTime() {
+        const now = new Date();
+        
+        // Menggunakan 'en-GB' untuk mendapatkan format masa 12-jam dengan AM/PM
+        const dateOptions = { day: 'numeric', month: 'long', year: 'numeric' };
+        const timeOptions = { hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true };
+        
+        const date = now.toLocaleDateString('en-GB', dateOptions);
+        const time = now.toLocaleTimeString('en-GB', timeOptions);
+        
+        // Gabungkan dan paparkan
+        document.getElementById('last-updated').textContent = `${date} | ${time}`;
+    }
+
+    updateDateTime();
+</script>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('popupMenu');
+            if (menu.style.display === "none" || menu.style.display === "") {
+                menu.style.display = "block";
+            } else {
+                menu.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
